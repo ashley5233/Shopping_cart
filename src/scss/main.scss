@@ -91,6 +91,16 @@ header {
   }
 }
 
+.navbar-icon-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .navbar-icon {
+    margin: 1.5rem;
+  }
+}
+
 .navbar-toggle:checked ~ .nav {
   transform-origin: top;
   transform: scale(1, 1);

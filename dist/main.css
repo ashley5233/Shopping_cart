@@ -82,6 +82,13 @@ header {
     height: 2px;
     background: rgba(42, 42, 42, 0.2); }
 
+.navbar-icon-items {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .navbar-icon-items .navbar-icon {
+    margin: 1.5rem; }
+
 .navbar-toggle:checked ~ .nav {
   transform-origin: top;
   transform: scale(1, 1); }
