@@ -21,10 +21,12 @@ h6,
 p,
 ol,
 ul,
+li,
 menu {
   margin: 0;
   padding: 0;
-  font-weight: normal; }
+  font-weight: normal;
+  list-style: none; }
 
 table {
   border: none;
@@ -35,12 +37,14 @@ th,
 td {
   text-align: initial; }
 
-a {
+a,
+a:hover,
+a:focus {
   text-decoration: none; }
 
 /*reset end*/
 /* Main  Header */
-header {
+.header-container {
   position: relative;
   background-color: #fff;
   display: fixed;
@@ -87,21 +91,52 @@ header {
   align-items: center;
   justify-content: center; }
   .navbar-icon-items .navbar-icon {
+    transition: opacity 0.2s ease-out 0.2s;
+    opacity: 0;
     margin: 1.5rem; }
 
-.navbar-toggle:checked ~ .nav {
+.navbar-toggle:checked ~ .nav,
+.navbar-icon-items {
   transform-origin: top;
   transform: scale(1, 1); }
 
-.navbar-toggle:checked ~ .nav .nav__navbar-item {
+.navbar-toggle:checked ~ .nav .nav__navbar-item,
+.navbar-toggle:checked ~ .navbar-icon-items .navbar-icon {
   opacity: 1; }
 
 /**************************************
 BREAKPOINTS - desktop
 **************************************/
-@media screen and (min-width: 375px) {
-  main {
-    width: 70%; }
-  aside {
-    width: 30%; } }
+@media screen and (min-width: 768px) {
+  /* Main Header */
+  .header-container {
+    display: grid;
+    grid-template-columns: 0.5fr 3fr auto 3fr 0.5fr; }
+  .navbar-toggle-label {
+    display: none; }
+  .nav {
+    all: unset;
+    height: 100%;
+    grid-column: 2 / 3;
+    position: absolute;
+    top: 0; }
+    .nav__navbar-item {
+      opacity: 1;
+      display: grid;
+      grid-auto-flow: column;
+      grid-gap: 2rem; }
+    .nav__navbar-link {
+      margin: 0; }
+      .nav__navbar-link::after {
+        display: none; }
+  .navbar-icon-items {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    grid-column: 4 /5;
+    justify-self: end; }
+    .navbar-icon-items .navbar-icon {
+      opacity: 1; }
+  .navbar-logo {
+    grid-column: 3 /4; } }
 

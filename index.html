@@ -8,15 +8,18 @@
     <link rel="stylesheet" href="dist/main.css" />
   </head>
   <body>
-    <header>
+    <header class="header-container">
       <label for="navbar-toggle" class="navbar-toggle-label">
         <span class="navbar-toggle-btn">
           <img src="./src/scss/images/Vector.svg" alt="" />
         </span>
       </label>
       <input type="checkbox" class="navbar-toggle" id="navbar-toggle" />
-      <img src="./src/scss/images/Icon.svg" alt="icon" />
-      <img src="./src/scss/images/ALPHA Shop.svg" alt="title" />
+      <div class="navbar-logo">
+        <img src="./src/scss/images/Icon.svg" alt="icon" />
+        <img src="./src/scss/images/ALPHA Shop.svg" alt="title" />
+      </div>
+
       <!-- 加入導覽列 -->
       <nav class="nav">
         <ul class="nav__navbar-item">
@@ -26,18 +29,18 @@
           <li class="nav__navbar-link"><a href="#">聯絡我們</a></li>
           <li class="nav__navbar-link"><a href="#">客製商品</a></li>
         </ul>
-        <div class="navbar-icon-items">
-          <div class="navbar-icon">
-            <img src="./src/scss/images/search-icon.svg" alt="search" />
-          </div>
-          <div class="navbar-icon">
-            <img src="./src/scss/images/cart-icon.svg" alt="cart" />
-          </div>
-          <div class="navbar-icon">
-            <img src="./src/scss/images/moon-icon.svg" alt="moon" />
-          </div>
-        </div>
       </nav>
+      <div class="navbar-icon-items">
+        <div class="navbar-icon">
+          <img src="./src/scss/images/search-icon.svg" alt="search" />
+        </div>
+        <div class="navbar-icon">
+          <img src="./src/scss/images/cart-icon.svg" alt="cart" />
+        </div>
+        <div class="navbar-icon">
+          <img src="./src/scss/images/moon-icon.svg" alt="moon" />
+        </div>
+      </div>
     </header>
 
     <script src="dist/bundle.js"></script>
