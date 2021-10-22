@@ -485,7 +485,6 @@ a:focus {
   padding-bottom: 2rem; }
 
 html {
-  font-size: 16px;
   height: 100%; }
 
 body {
@@ -615,9 +614,15 @@ body {
 .navbar-toggle:checked ~ .navbar-icon-items .navbar-icon {
   opacity: 1; }
 
-.stepper-panel .stepper-container {
+.main-container {
+  display: flex;
+  flex-direction: column; }
+
+.container {
   width: 90%;
-  margin: 0 auto;
+  margin: 0 auto; }
+
+.stepper-panel .stepper-container {
   display: flex; }
 
 .step {
@@ -667,6 +672,39 @@ body {
     top: 16px;
     right: calc(50% + 20px);
     left: calc(-50% + 25px); }
+
+.form-row {
+  margin-bottom: 24px; }
+  .form-row > label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    color: #808080;
+    padding-bottom: 8px; }
+  .form-row input,
+  .form-row select {
+    border: 1px solid #808080;
+    border-radius: 4px;
+    color: #999;
+    font-weight: 400;
+    padding: 12px;
+    width: 100%; }
+    .form-row input:hover, .form-row input:focus,
+    .form-row select:hover,
+    .form-row select:focus {
+      border-color: #2a2a2a;
+      color: #2a2a2a; }
+
+.form-panel {
+  padding-top: 24px;
+  flex: 1; }
+  .form-panel .gender {
+    width: 40%; }
+  .form-panel .name {
+    width: 55%; }
+  .form-panel .inline-form {
+    display: flex;
+    justify-content: space-between; }
 
 /**************************************
 BREAKPOINTS - desktop
