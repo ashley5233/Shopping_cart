@@ -625,6 +625,21 @@ body {
   text-align: center;
   margin-top: 24px;
   position: relative; }
+  .step:nth-child(1) .circle-container::after {
+    content: "1";
+    color: #afb1bd;
+    font-size: 16px;
+    font-weight: 700; }
+  .step:nth-child(2) .circle-container::after {
+    content: "2";
+    color: #afb1bd;
+    font-size: 16px;
+    font-weight: 700; }
+  .step:nth-child(3) .circle-container::after {
+    content: "3";
+    color: #afb1bd;
+    font-size: 16px;
+    font-weight: 700; }
   .step .circle-container {
     height: 32px;
     width: 32px;
@@ -641,6 +656,8 @@ body {
     border: 1px solid #2a2a2a; }
   .step.active .circle-container::after {
     color: #2a2a2a; }
+  .step.active .connect-line {
+    background-color: #000; }
   .step .connect-line {
     display: block;
     height: 2px;

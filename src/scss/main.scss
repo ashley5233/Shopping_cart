@@ -297,6 +297,7 @@ body {
   text-align: center;
   margin-top: 24px;
   position: relative;
+  @include getStepNums(3);
   .circle-container {
     height: 32px;
     width: 32px;
@@ -322,6 +323,9 @@ body {
 
     .circle-container::after {
       color: $black;
+    }
+    .connect-line {
+      background-color: #000;
     }
   }
   .connect-line {
