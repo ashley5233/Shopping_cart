@@ -45,9 +45,9 @@
     <div class="main-container">
       <!-- 結帳 -->
       <div class="main-content">
-        <h2>結帳</h2>
         <!-- Stepper -->
         <div class="stepper-panel">
+          <h2>結帳</h2>
           <div class="container stepper-container">
             <div class="step checked">
               <div class="circle-container"></div>
@@ -151,30 +151,40 @@
 
           <!-- 購物車項目 -->
           <div class="cart-items">
-            <div class="item-content">
-              <div class="item-img"></div>
-              <div class="item-name">破壞補丁修身牛仔褲</div>
-              <div class="item-btn">1</div>
-              <div class="price">$3,999</div>
+            <div class="d-flex item">
+              <div class="item-img">
+                <img src="./src/scss/images/item1.jpg" alt="" />
+              </div>
+              <div class="item-info">
+                <div class="item-name">破壞補丁修身牛仔褲</div>
+                <div class="item-btn">1</div>
+                <div class="price">$3,999</div>
+              </div>
             </div>
-            <div class="item">
-              <div class="item-img"></div>
-              <div class="item-name">破壞補丁修身牛仔褲</div>
-              <div class="item-btn">1</div>
-              <div class="price">$3,999</div>
+            <div class="d-flex item">
+              <div class="item-img">
+                <img src="./src/scss/images/item2.jpg" alt="" />
+              </div>
+              <div class="item-info">
+                <div class="item-name">破壞補丁修身牛仔褲</div>
+                <div class="item-btn">1</div>
+                <div class="price">$3,999</div>
+              </div>
             </div>
-          </div>
-          <div class="delivery-fee">
-            <div class="title">運費</div>
-            <div class="fee">免費</div>
-          </div>
-          <div class="total">
-            <div class="title">小計</div>
-            <div class="fee">$5,298</div>
+            <div class="d-flex justify-content-between count">
+              <div class="title">運費</div>
+              <div class="fee">免費</div>
+            </div>
+            <div class="d-flex justify-content-between count">
+              <div class="title">小計</div>
+              <div class="fee">$5,298</div>
+            </div>
           </div>
 
-          <div class="spilt-line">分隔線</div>
-          <div class="button">下一步</div>
+          <div class="spilt-line"></div>
+          <div class="button-control">
+            <button>下一步</button>
+          </div>
         </div>
       </div>
     </div>

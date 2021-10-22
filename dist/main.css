@@ -622,6 +622,9 @@ body {
   width: 90%;
   margin: 0 auto; }
 
+.stepper-panel h2 {
+  padding-left: 1rem; }
+
 .stepper-panel .stepper-container {
   display: flex; }
 
@@ -705,6 +708,43 @@ body {
   .form-panel .inline-form {
     display: flex;
     justify-content: space-between; }
+
+/* Cart items */
+.cart-items {
+  border: 1px solid #f0f0f5;
+  border-radius: 8px;
+  padding-left: 16px; }
+  .cart-items .item {
+    margin-top: 18px; }
+  .cart-items .item-info {
+    text-align: right;
+    flex: 1;
+    padding: 16px; }
+  .cart-items .title,
+  .cart-items .fee {
+    font-size: 14px; }
+  .cart-items .fee {
+    font-weight: 700;
+    color: #2a2a2a;
+    padding-right: 24px; }
+
+.spilt-line {
+  height: 2px;
+  width: 100%;
+  background-color: #e6e6e6;
+  margin-top: 32px; }
+
+.button-control {
+  padding-top: 24px;
+  padding-bottom: 40px; }
+  .button-control > button {
+    background-color: #f67599;
+    color: white;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 8px;
+    outline: none;
+    border: none; }
 
 /**************************************
 BREAKPOINTS - desktop

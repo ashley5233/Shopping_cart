@@ -40,6 +40,7 @@ a:hover,
 a:focus {
   text-decoration: none;
 }
+
 /*reset end*/
 
 /* basic setting */
@@ -50,6 +51,7 @@ $black: #2a2a2a;
 $step-gray: #afb1bd;
 $light-gray: #808080;
 $dark-gray: #4a4a4a;
+$button-color: #f67599;
 
 $sizes: (
   25: 25%,
@@ -298,6 +300,9 @@ body {
 
 // 設定stepper
 .stepper-panel {
+  h2 {
+    padding-left: 1rem;
+  }
   .stepper-container {
     display: flex;
   }
@@ -390,6 +395,51 @@ body {
     display: flex;
     justify-content: space-between;
   }
+}
+
+/* Cart items */
+.cart-items {
+  border: 1px solid #f0f0f5;
+  border-radius: 8px;
+  padding-left: 16px;
+  .item {
+    margin-top: 18px;
+  }
+  .item-info {
+    text-align: right;
+    flex: 1;
+    padding: 16px;
+  }
+  .title,
+  .fee {
+    font-size: 14px;
+  }
+  .fee {
+    font-weight: 700;
+    color: $black;
+    padding-right: 24px;
+  }
+}
+
+.spilt-line {
+  height: 2px;
+  width: 100%;
+  background-color: #e6e6e6;
+  margin-top: 32px;
+}
+
+.button-control {
+  > button {
+    background-color: $button-color;
+    color: white;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+  }
+  padding-top: 24px;
+  padding-bottom: 40px;
 }
 
 /**************************************
