@@ -484,7 +484,6 @@ a:focus {
   padding-top: 2rem;
   padding-bottom: 2rem; }
 
-/* 使用@each 產出css spacer 設定 */
 html {
   font-size: 16px;
   height: 100%; }
@@ -615,6 +614,42 @@ body {
 .navbar-toggle:checked ~ .nav .nav__navbar-item,
 .navbar-toggle:checked ~ .navbar-icon-items .navbar-icon {
   opacity: 1; }
+
+.stepper-panel .stepper-container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex; }
+
+.step {
+  flex: 1;
+  text-align: center;
+  margin-top: 24px;
+  position: relative; }
+  .step .circle-container {
+    height: 32px;
+    width: 32px;
+    line-height: 32px;
+    border: 1px solid #afb1bd;
+    border-radius: 50%;
+    margin: 0 auto; }
+  .step.checked .circle-container {
+    background-color: #2a2a2a; }
+  .step.checked .circle-container::after {
+    color: #fff;
+    content: "\2714"; }
+  .step.active .circle-container {
+    border: 1px solid #2a2a2a; }
+  .step.active .circle-container::after {
+    color: #2a2a2a; }
+  .step .connect-line {
+    display: block;
+    height: 2px;
+    width: 50%;
+    background-color: #afb1bd;
+    position: absolute;
+    top: 16px;
+    right: calc(50% + 20px);
+    left: calc(-50% + 25px); }
 
 /**************************************
 BREAKPOINTS - desktop
