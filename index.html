@@ -102,20 +102,32 @@
               <input type="text" placeholder="請輸入地址" id="address" />
             </div>
           </div>
+
           <!-- Delivery way choice -->
           <div class="delivery-way">
             <h2>運送方式</h2>
             <div class="standard">
               <input type="radio" id="standard" name="delivery-way" checked />
-              <label for="standard">標準運送<span>約3~7個工作天</span></label>
+              <label for="standard">
+                <div class="delivery-title">
+                  <div class="title">標準運送</div>
+                  <div class="description">約3~7個工作天</div>
+                </div>
+              </label>
+              <div class="delivery-fee">免費</div>
             </div>
             <div class="DHL-delivery">
               <input type="radio" id="DHL-delivery" name="delivery-way" />
-              <label for="DHL-delivery"
-                >DHＬ貨運 <span>48小時內送達</span></label
-              >
+              <label for="DHL-delivery">
+                <div class="delivery-title">
+                  <div class="title">DHＬ貨運</div>
+                  <div class="description">48小時內送達</div>
+                </div>
+              </label>
+              <div class="delivery-fee">$500</div>
             </div>
           </div>
+
           <!-- Payment info -->
           <div class="payment-form">
             <h2>付款資訊</h2>
@@ -142,10 +154,15 @@
                   maxlength="5"
                 />
               </div>
-            </div>
-            <div class="form-row CVC-num">
-              <label for="CVC-num">CVC/CCV</label>
-              <input type="text" id="CVC-num" placeholder="123" maxlength="3" />
+              <div class="form-row CVC-num">
+                <label for="CVC-num">CVC/CCV</label>
+                <input
+                  type="text"
+                  id="CVC-num"
+                  placeholder="123"
+                  maxlength="3"
+                />
+              </div>
             </div>
           </div>
 

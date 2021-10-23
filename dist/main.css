@@ -708,6 +708,47 @@ body {
   .form-panel .inline-form {
     display: flex;
     justify-content: space-between; }
+  .form-panel .expiry-date,
+  .form-panel .CVC-num {
+    width: 47%; }
+
+/* Delivery way */
+.delivery-way .standard,
+.delivery-way .DHL-delivery {
+  font-weight: 400;
+  position: relative;
+  border: 1px solid #f0f0f0;
+  border-radius: 4px;
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  padding: 12px; }
+  .delivery-way .standard .delivery-title,
+  .delivery-way .DHL-delivery .delivery-title {
+    display: inline-block;
+    margin-left: 26px; }
+    .delivery-way .standard .delivery-title .title,
+    .delivery-way .DHL-delivery .delivery-title .title {
+      font-size: 14px; }
+    .delivery-way .standard .delivery-title .description,
+    .delivery-way .DHL-delivery .delivery-title .description {
+      font-size: 12px; }
+  .delivery-way .standard .delivery-fee,
+  .delivery-way .DHL-delivery .delivery-fee {
+    position: absolute;
+    right: 5%;
+    top: 10%;
+    font-size: 12px; }
+
+.delivery-way input[type="radio"] {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px black solid;
+  padding: 4px; }
+  .delivery-way input[type="radio"]:checked {
+    box-shadow: 0 0 0 5px #2a2a2a inset; }
 
 /* Cart items */
 .cart-items {
