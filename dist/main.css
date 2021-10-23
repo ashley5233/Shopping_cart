@@ -577,7 +577,9 @@ body {
 .nav {
   transform-origin: top;
   transform: scale(1, 0);
-  transition: transform 0.3s ease-out 0.15s; }
+  transition: transform 0.3s ease-out 0.15s;
+  background-color: #fff;
+  z-index: 999; }
   .nav__navbar-item {
     transition: opacity 0.2s ease-out 0.15s;
     opacity: 0; }
@@ -661,9 +663,11 @@ body {
     color: #fff;
     content: "\2714"; }
   .step.active .circle-container {
-    border: 1px solid #2a2a2a; }
+    border: 1px solid #2a2a2a;
+    background-color: #2a2a2a;
+    color: #fff; }
   .step.active .circle-container::after {
-    color: #2a2a2a; }
+    color: #fff; }
   .step.active .connect-line {
     background-color: #000; }
   .step .connect-line {
@@ -763,11 +767,11 @@ body {
     padding: 16px; }
   .cart-items .title,
   .cart-items .fee {
-    font-size: 14px; }
+    font-size: 14px;
+    padding: 12px; }
   .cart-items .fee {
     font-weight: 700;
-    color: #2a2a2a;
-    padding-right: 24px; }
+    color: #2a2a2a; }
 
 .spilt-line {
   height: 2px;
@@ -776,12 +780,14 @@ body {
   margin-top: 32px; }
 
 .button-control {
+  display: flex;
   padding-top: 24px;
   padding-bottom: 40px; }
+  .button-control .btn {
+    flex: 1; }
   .button-control > button {
     background-color: #f67599;
     color: white;
-    width: 100%;
     padding: 1rem;
     border-radius: 8px;
     outline: none;

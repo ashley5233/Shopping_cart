@@ -46,13 +46,13 @@
       <!-- 結帳 -->
       <div class="main-content">
         <!-- Stepper -->
-        <div class="stepper-panel">
+        <div id="step-control" class="stepper-panel">
           <h2>結帳</h2>
-          <div class="container stepper-container">
-            <div class="step checked">
+          <div id="step-container" class="container stepper-container">
+            <div class="step ">
               <div class="circle-container"></div>
             </div>
-            <div class="step active">
+            <div class="step ">
               <span class="connect-line"></span>
               <div class="circle-container"></div>
             </div>
@@ -65,8 +65,9 @@
 
         <div class="container form-panel">
           <div class="form-container">
-            <!-- Personal info form -->
-            <div class="personal-form">
+            <form id="a-form">
+          <!-- Personal info form -->
+            <div class="part personal-form">
               <h2>寄送地址</h2>
               <div class="inline-form">
                 <div class="form-row gender">
@@ -104,7 +105,7 @@
           </div>
 
           <!-- Delivery way choice -->
-          <div class="delivery-way">
+          <div class="part delivery-way d-none">
             <h2>運送方式</h2>
             <div class="standard">
               <input type="radio" id="standard" name="delivery-way" checked />
@@ -129,7 +130,7 @@
           </div>
 
           <!-- Payment info -->
-          <div class="payment-form">
+          <div class="part payment-form d-none">
             <h2>付款資訊</h2>
             <div class="form-row card-name">
               <label for="card-name">持卡人姓名</label>
@@ -166,6 +167,9 @@
             </div>
           </div>
 
+            </form>
+            
+
           <!-- 購物車項目 -->
           <div class="cart-items">
             <div class="d-flex item">
@@ -200,12 +204,15 @@
 
           <div class="spilt-line"></div>
           <div class="button-control">
-            <button>下一步</button>
+            <button class="btn previous-btn d-none">上一步</button>
+            <button class="btn btn-next">下一步</button>
           </div>
         </div>
       </div>
     </div>
 
+    <script src="./index.js"></script>
     <script src="dist/bundle.js"></script>
+    
   </body>
 </html>

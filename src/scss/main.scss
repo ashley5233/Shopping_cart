@@ -240,6 +240,8 @@ body {
   transform-origin: top;
   transform: scale(1, 0);
   transition: transform 0.3s ease-out 0.15s;
+  background-color: #fff;
+  z-index: 999;
 
   &__navbar-item {
     transition: opacity 0.2s ease-out 0.15s;
@@ -334,10 +336,12 @@ body {
   &.active {
     .circle-container {
       border: 1px solid $black;
+      background-color: $black;
+      color: #fff;
     }
 
     .circle-container::after {
-      color: $black;
+      color: #fff;
     }
     .connect-line {
       background-color: #000;
@@ -467,11 +471,11 @@ body {
   .title,
   .fee {
     font-size: 14px;
+    padding: 12px;
   }
   .fee {
     font-weight: 700;
     color: $black;
-    padding-right: 24px;
   }
 }
 
@@ -483,10 +487,13 @@ body {
 }
 
 .button-control {
+  display: flex;
+  .btn {
+    flex: 1;
+  }
   > button {
     background-color: $button-color;
     color: white;
-    width: 100%;
     padding: 1rem;
     border-radius: 8px;
     outline: none;
