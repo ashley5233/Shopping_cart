@@ -42,177 +42,179 @@
         </div>
       </div>
     </header>
-    <div class="main-container">
-      <!-- 結帳 -->
-      <div class="main-content">
-        <!-- Stepper -->
-        <div id="step-control" class="stepper-panel">
-          <h2>結帳</h2>
-          <div id="step-container" class="container stepper-container">
-            <div class="step ">
-              <div class="circle-container"></div>
-            </div>
-            <div class="step ">
-              <span class="connect-line"></span>
-              <div class="circle-container"></div>
-            </div>
-            <div class="step">
-              <span class="connect-line"></span>
-              <div class="circle-container"></div>
-            </div>
+    <main class="main-content">
+      <!-- Stepper -->
+      <div id="step-control" class="stepper-panel">
+        <h2>結帳</h2>
+
+        <div id="step-container" class="container stepper-container">
+          <div class="step">
+            <div class="circle-container"></div>
           </div>
-        </div>
-
-        <div class="container form-panel">
-          <div class="form-container">
-            <form id="a-form">
-          <!-- Personal info form -->
-            <div class="part personal-form">
-              <h2>寄送地址</h2>
-              <div class="inline-form">
-                <div class="form-row gender">
-                  <label for="gender" class="gender">稱謂</label>
-                  <select name="gender" id="gender">
-                    <option value="">先生</option>
-                    <option value="">女士</option>
-                  </select>
-                </div>
-                <div class="form-row name">
-                  <label for="name">姓名</label>
-                  <input type="text" placeholder="請輸入姓名" id="name" />
-                </div>
-              </div>
-
-              <div class="form-row phone">
-                <label for="phone">電話</label>
-                <input type="text" placeholder="請輸入行動電話" id="email" />
-              </div>
-              <div class="form-row email">
-                <label for="email">Email</label>
-                <input type="text" placeholder="請輸入電子郵件" id="email" />
-              </div>
-              <div class="form-row country">
-                <label for="country">縣市</label>
-                <select name="country" id="country">
-                  <option value="" disabled selected>請選擇縣市</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-row address">
-              <label for="address">地址</label>
-              <input type="text" placeholder="請輸入地址" id="address" />
-            </div>
+          <div class="step">
+            <span class="connect-line"></span>
+            <div class="circle-container"></div>
           </div>
-
-          <!-- Delivery way choice -->
-          <div class="part delivery-way d-none">
-            <h2>運送方式</h2>
-            <div class="standard">
-              <input type="radio" id="standard" name="delivery-way" checked />
-              <label for="standard">
-                <div class="delivery-title">
-                  <div class="title">標準運送</div>
-                  <div class="description">約3~7個工作天</div>
-                </div>
-              </label>
-              <div class="delivery-fee">免費</div>
-            </div>
-            <div class="DHL-delivery">
-              <input type="radio" id="DHL-delivery" name="delivery-way" />
-              <label for="DHL-delivery">
-                <div class="delivery-title">
-                  <div class="title">DHＬ貨運</div>
-                  <div class="description">48小時內送達</div>
-                </div>
-              </label>
-              <div class="delivery-fee">$500</div>
-            </div>
-          </div>
-
-          <!-- Payment info -->
-          <div class="part payment-form d-none">
-            <h2>付款資訊</h2>
-            <div class="form-row card-name">
-              <label for="card-name">持卡人姓名</label>
-              <input type="text" id="card-name" placeholder="John Doe" />
-            </div>
-            <div class="form-row card-num">
-              <label for="card-num">卡號</label>
-              <input
-                type="number"
-                id="card-num"
-                placeholder="1111 2222 3333 4444"
-                maxlength="16"
-              />
-            </div>
-            <div class="inline-form">
-              <div class="form-row expiry-date">
-                <label for="expiry">有效期限</label>
-                <input
-                  type="text"
-                  id="expiry"
-                  placeholder="MM/YY"
-                  maxlength="5"
-                />
-              </div>
-              <div class="form-row CVC-num">
-                <label for="CVC-num">CVC/CCV</label>
-                <input
-                  type="text"
-                  id="CVC-num"
-                  placeholder="123"
-                  maxlength="3"
-                />
-              </div>
-            </div>
-          </div>
-
-            </form>
-            
-
-          <!-- 購物車項目 -->
-          <div class="cart-items">
-            <div class="d-flex item">
-              <div class="item-img">
-                <img src="./src/scss/images/item1.jpg" alt="" />
-              </div>
-              <div class="item-info">
-                <div class="item-name">破壞補丁修身牛仔褲</div>
-                <div class="item-btn">1</div>
-                <div class="price">$3,999</div>
-              </div>
-            </div>
-            <div class="d-flex item">
-              <div class="item-img">
-                <img src="./src/scss/images/item2.jpg" alt="" />
-              </div>
-              <div class="item-info">
-                <div class="item-name">破壞補丁修身牛仔褲</div>
-                <div class="item-btn">1</div>
-                <div class="price">$3,999</div>
-              </div>
-            </div>
-            <div class="d-flex justify-content-between count">
-              <div class="title">運費</div>
-              <div class="fee">免費</div>
-            </div>
-            <div class="d-flex justify-content-between count">
-              <div class="title">小計</div>
-              <div class="fee">$5,298</div>
-            </div>
-          </div>
-
-          <div class="spilt-line"></div>
-          <div class="button-control">
-            <button class="btn previous-btn d-none">上一步</button>
-            <button class="btn btn-next">下一步</button>
+          <div class="step">
+            <span class="connect-line"></span>
+            <div class="circle-container"></div>
           </div>
         </div>
       </div>
-    </div>
+
+      <!-- Form -->
+      <div class="form-panel">
+        <div class="container form-container">
+          <form id="a-form">
+            <div class="form-content">
+              <!-- Personal info form -->
+              <div class="part personal-form">
+                <h2>寄送地址</h2>
+                <div class="inline-form">
+                  <div class="form-row gender">
+                    <label for="gender" class="gender">稱謂</label>
+                    <select name="gender" id="gender">
+                      <option value="">先生</option>
+                      <option value="">女士</option>
+                    </select>
+                  </div>
+                  <div class="form-row name">
+                    <label for="name">姓名</label>
+                    <input type="text" placeholder="請輸入姓名" id="name" />
+                  </div>
+                </div>
+
+                <div class="form-row phone">
+                  <label for="phone">電話</label>
+                  <input type="text" placeholder="請輸入行動電話" id="email" />
+                </div>
+                <div class="form-row email">
+                  <label for="email">Email</label>
+                  <input type="text" placeholder="請輸入電子郵件" id="email" />
+                </div>
+                <div class="form-row country">
+                  <label for="country">縣市</label>
+                  <select name="country" id="country">
+                    <option value="" disabled selected>請選擇縣市</option>
+                  </select>
+                </div>
+                <div class="form-row address">
+                  <label for="address">地址</label>
+                  <input type="text" placeholder="請輸入地址" id="address" />
+                </div>
+              </div>
+              <!-- Delivery way choice -->
+              <div class="part delivery-way d-none">
+                <h2>運送方式</h2>
+                <div class="standard">
+                  <input
+                    type="radio"
+                    id="standard"
+                    name="delivery-way"
+                    checked
+                  />
+                  <label for="standard">
+                    <div class="delivery-title">
+                      <div class="title">標準運送</div>
+                      <div class="description">約3~7個工作天</div>
+                    </div>
+                  </label>
+                  <div class="delivery-fee">免費</div>
+                </div>
+                <div class="DHL-delivery">
+                  <input type="radio" id="DHL-delivery" name="delivery-way" />
+                  <label for="DHL-delivery">
+                    <div class="delivery-title">
+                      <div class="title">DHＬ貨運</div>
+                      <div class="description">48小時內送達</div>
+                    </div>
+                  </label>
+                  <div class="delivery-fee">$500</div>
+                </div>
+              </div>
+
+              <!-- Payment info -->
+              <div class="part payment-form d-none">
+                <h2>付款資訊</h2>
+                <div class="form-row card-name">
+                  <label for="card-name">持卡人姓名</label>
+                  <input type="text" id="card-name" placeholder="John Doe" />
+                </div>
+                <div class="form-row card-num">
+                  <label for="card-num">卡號</label>
+                  <input
+                    type="number"
+                    id="card-num"
+                    placeholder="1111 2222 3333 4444"
+                    maxlength="16"
+                  />
+                </div>
+                <div class="inline-form">
+                  <div class="form-row expiry-date">
+                    <label for="expiry">有效期限</label>
+                    <input
+                      type="text"
+                      id="expiry"
+                      placeholder="MM/YY"
+                      maxlength="5"
+                    />
+                  </div>
+                  <div class="form-row CVC-num">
+                    <label for="CVC-num">CVC/CCV</label>
+                    <input
+                      type="text"
+                      id="CVC-num"
+                      placeholder="123"
+                      maxlength="3"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- 購物車項目 -->
+        <div class="cart-items">
+          <div class="d-flex item">
+            <div class="item-img">
+              <img src="./src/scss/images/item1.jpg" alt="" />
+            </div>
+            <div class="item-info">
+              <div class="item-name">破壞補丁修身牛仔褲</div>
+              <div class="item-btn">1</div>
+              <div class="price">$3,999</div>
+            </div>
+          </div>
+          <div class="d-flex item">
+            <div class="item-img">
+              <img src="./src/scss/images/item2.jpg" alt="" />
+            </div>
+            <div class="item-info">
+              <div class="item-name">破壞補丁修身牛仔褲</div>
+              <div class="item-btn">1</div>
+              <div class="price">$3,999</div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between count">
+            <div class="title">運費</div>
+            <div class="fee">免費</div>
+          </div>
+          <div class="d-flex justify-content-between count">
+            <div class="title">小計</div>
+            <div class="fee">$5,298</div>
+          </div>
+        </div>
+
+        <div class="spilt-line"></div>
+        <div class="button-control">
+          <button class="btn previous-btn d-none">上一步</button>
+          <button class="btn btn-next">下一步</button>
+        </div>
+      </div>
+    </main>
 
     <script src="./index.js"></script>
     <script src="dist/bundle.js"></script>
-    
   </body>
 </html>

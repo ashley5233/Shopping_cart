@@ -7,6 +7,7 @@ const nextBtn = document.querySelector(".btn-next");
 const prevBtn = document.querySelector(".previous-btn");
 
 let step = 0;
+let navbarSwitch = 0;
 
 function handleBtnControlClicked(e) {
   e.preventDefault();
@@ -27,6 +28,24 @@ function handleBtnControlClicked(e) {
     formParts[step].classList.toggle("d-none");
     formParts[step - 1].classList.toggle("d-none");
     step -= 1;
+  }
+  setBtnDisabled();
+}
+
+function setBtnDisabled() {
+  if (step === 0) {
+    prevBtn.classList.add("d-none");
+    prevBtn.innerHTML = "";
+    prevBtn.setAttribute("disabled", "disabled");
+  } else {
+    prevBtn.classList.remove("d-none");
+    prevBtn.removeAttribute("disabled");
+    prevBtn.innerHTML = "&#8592上一步";
+  }
+  if (step === 2) {
+    nextBtn.innerHTML = "確認下單";
+  } else {
+    nextBtn.innerHTML = "下一步&#8594";
   }
 }
 

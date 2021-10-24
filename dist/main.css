@@ -44,7 +44,6 @@ a:focus {
   text-decoration: none; }
 
 /*reset end*/
-/* basic setting */
 .w-25 {
   width: 25%; }
 
@@ -784,14 +783,18 @@ body {
   padding-top: 24px;
   padding-bottom: 40px; }
   .button-control .btn {
-    flex: 1; }
-  .button-control > button {
+    flex: 1;
     background-color: #f67599;
-    color: white;
+    color: white; }
+    .button-control .btn:hover {
+      cursor: pointer;
+      background-color: #f67095; }
+  .button-control > button {
     padding: 1rem;
     border-radius: 8px;
     outline: none;
-    border: none; }
+    border: none;
+    background-color: #fff; }
 
 /**************************************
 BREAKPOINTS - desktop
