@@ -280,6 +280,11 @@
   display: flex;
   .btn {
     flex: 1;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .btn-next {
     background-color: $button-color;
     color: white;
     &:hover {
@@ -298,6 +303,10 @@
   padding-bottom: 40px;
 }
 
+.footer {
+  display: none;
+}
+
 /**************************************
 BREAKPOINTS - desktop
 **************************************/
@@ -305,7 +314,7 @@ BREAKPOINTS - desktop
   /* Main Header */
   .header-container {
     display: grid;
-    grid-template-columns: 0.5fr 3fr auto 3fr 0.5fr;
+    grid-template-columns: 1fr 3fr auto 3fr 1fr;
   }
   .navbar-toggle-label {
     display: none;
@@ -366,6 +375,35 @@ BREAKPOINTS - desktop
     .button-control {
       grid-column: 2 / 3;
       grid-row: 3 / 4;
+    }
+  }
+  .footer {
+    display: block;
+    background-color: rgba(#ffffff, 0.6);
+    height: 284px;
+
+    &-content {
+      display: grid;
+      height: 100%;
+      grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
+      h2 {
+        padding-top: 40px;
+      }
+      .footer-logo {
+        grid-column: 2 / 3;
+
+        .logos {
+          justify-content: center;
+        }
+      }
+      .footer-list {
+        padding-bottom: 14px;
+      }
+      .footer-link {
+        color: $body-bg;
+        font-weight: 400;
+        padding-top: 8px;
+      }
     }
   }
 }
