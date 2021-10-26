@@ -799,7 +799,7 @@ body {
 /**************************************
 BREAKPOINTS - desktop
 **************************************/
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
   /* Main Header */
   .header-container {
     display: grid;
@@ -830,5 +830,21 @@ BREAKPOINTS - desktop
     .navbar-icon-items .navbar-icon {
       opacity: 1; }
   .navbar-logo {
-    grid-column: 3 /4; } }
+    grid-column: 3 /4; }
+  .main-content {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 2fr 0.5fr;
+    grid-template-rows: 0.5fr 2fr 0.5fr; }
+    .main-content .stepper-panel {
+      grid-column: 2 / 3;
+      grid-row: 1 /2; }
+    .main-content .form-panel {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3; }
+    .main-content .cart-items {
+      grid-column: 3 / 4;
+      grid-row: 2 /3; }
+    .main-content .button-control {
+      grid-column: 2 / 3;
+      grid-row: 3 / 4; } }
 
