@@ -367,6 +367,23 @@ BREAKPOINTS - desktop
     .form-panel {
       grid-column: 2 / 3;
       grid-row: 2 / 3;
+
+      .block-form {
+        display: flex;
+        justify-content: space-between;
+        .phone {
+          width: 50%;
+        }
+        .email {
+          width: 45%;
+        }
+        .country {
+          width: 30%;
+        }
+        .address {
+          width: 65%;
+        }
+      }
     }
     .cart-items {
       grid-column: 3 / 4;
@@ -375,11 +392,21 @@ BREAKPOINTS - desktop
     .button-control {
       grid-column: 2 / 3;
       grid-row: 3 / 4;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+
+      .btn {
+        height: 46px;
+      }
+      .btn-next {
+        grid-column: 3 / 4;
+      }
     }
   }
+
   .footer {
     display: block;
-    background-color: rgba(#ffffff, 0.6);
+    background-color: rgba($body-bg, 0.6);
     height: 284px;
 
     &-content {
@@ -403,7 +430,7 @@ BREAKPOINTS - desktop
         padding-bottom: 14px;
       }
       .footer-link {
-        color: $body-bg;
+        color: #333;
         font-weight: 400;
         padding-top: 8px;
       }
