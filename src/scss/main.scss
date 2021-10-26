@@ -391,9 +391,12 @@ BREAKPOINTS - desktop
       }
       .footer-logo {
         grid-column: 2 / 3;
+        background-color: #eee;
 
         .logos {
-          justify-content: center;
+          height: 100%;
+          align-content: center;
+          justify-items: center;
         }
       }
       .footer-list {

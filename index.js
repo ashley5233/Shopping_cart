@@ -24,7 +24,6 @@ function handleBtnControlClicked(e) {
     const prevStep = steps[step - 1];
     nowStep.classList.remove("active");
     prevStep.classList.remove("checked");
-    prevStep.classList.add("checked");
     formParts[step].classList.toggle("d-none");
     formParts[step - 1].classList.toggle("d-none");
     step -= 1;
