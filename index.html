@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ALPHA SHOP</title>
+    <!-- Awesome font link -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="dist/main.css" />
   </head>
   <body>
@@ -16,8 +23,10 @@
       </label>
       <input type="checkbox" class="navbar-toggle" id="navbar-toggle" />
       <div class="navbar-logo">
-        <img src="./src/scss/images/Icon.svg" alt="icon" />
-        <img src="./src/scss/images/ALPHA Shop.svg" alt="title" />
+        <div class="logo">
+          <img src="./src/scss/images/Icon.svg" alt="" />
+        </div>
+        <div class="alpha-logo"></div>
       </div>
 
       <!-- 加入導覽列 -->
@@ -32,16 +41,14 @@
       </nav>
       <div class="navbar-icon-items">
         <div class="navbar-icon">
-          <img src="./src/scss/images/search-icon.svg" alt="search" />
+          <div class="search-icon"></div>
         </div>
         <div class="navbar-icon">
-          <img src="./src/scss/images/cart-icon.svg" alt="cart" />
+          <div class="cart-icon"></div>
         </div>
         <div class="navbar-icon">
           <input type="checkbox" class="moon-mode" id="moon-mode" />
-          <label for="moon-mode">
-            <img src="./src/scss/images/moon-icon.svg" alt="moon" />
-          </label>
+          <label for="moon-mode" class="moon-icon"> </label>
         </div>
       </div>
     </header>
@@ -72,7 +79,7 @@
             <div class="form-content">
               <!-- Personal info form -->
               <div class="part personal-form">
-                <h2>寄送地址</h2>
+                <h2 class="form-title">寄送地址</h2>
                 <div class="inline-form">
                   <div class="form-row gender">
                     <label for="gender" class="gender">稱謂</label>
@@ -121,7 +128,7 @@
               </div>
               <!-- Delivery way choice -->
               <div class="part delivery-way d-none">
-                <h2>運送方式</h2>
+                <h2 class="form-title">運送方式</h2>
                 <div class="standard">
                   <input
                     type="radio"
@@ -151,7 +158,7 @@
 
               <!-- Payment info -->
               <div class="part payment-form d-none">
-                <h2>付款資訊</h2>
+                <h2 class="form-title">付款資訊</h2>
                 <div class="form-row card-name">
                   <label for="card-name">持卡人姓名</label>
                   <input type="text" id="card-name" placeholder="John Doe" />
@@ -193,13 +200,18 @@
       <!-- cart panel -->
       <!-- 購物車項目 -->
       <div class="cart-items">
+        <div class="cart-title">購物籃</div>
         <div class="d-flex item">
           <div class="item-img">
             <img src="./src/scss/images/item1.jpg" alt="" />
           </div>
           <div class="item-info">
             <div class="item-name">破壞補丁修身牛仔褲</div>
-            <div class="item-btn">1</div>
+            <div class="item-btn">
+              <div class="minus-btn">-</div>
+              <div class="quantity">1</div>
+              <div class="add-btn">+</div>
+            </div>
             <div class="price">$3,999</div>
           </div>
         </div>
@@ -208,9 +220,13 @@
             <img src="./src/scss/images/item2.jpg" alt="" />
           </div>
           <div class="item-info">
-            <div class="item-name">破壞補丁修身牛仔褲</div>
-            <div class="item-btn">1</div>
-            <div class="price">$3,999</div>
+            <div class="item-name">刷色直筒牛仔褲</div>
+            <div class="item-btn">
+              <div class="minus-btn">-</div>
+              <div class="quantity">1</div>
+              <div class="add-btn">+</div>
+            </div>
+            <div class="price">$1,299</div>
           </div>
         </div>
         <div class="d-flex justify-content-between count">
@@ -219,11 +235,10 @@
         </div>
         <div class="d-flex justify-content-between count">
           <div class="title">小計</div>
-          <div class="fee">$5,298</div>
+          <div class="total">$5,298</div>
         </div>
       </div>
-      <!-- 
-      <div class="spilt-line"></div> -->
+
       <div class="button-control">
         <button class="btn previous-btn d-none">上一步</button>
         <button class="btn btn-next">下一步</button>
@@ -233,8 +248,10 @@
       <div class="footer-content">
         <div class="footer-logo">
           <div class="logos">
-            <img src="./src/scss/images/Icon.svg" alt="icon" />
-            <img src="./src/scss/images/ALPHA Shop.svg" alt="title" />
+            <div class="footer-logo">
+              <img src="./src/scss/images/Icon.svg" alt="icon" />
+            </div>
+            <div class="footer-alpha"></div>
           </div>
         </div>
         <div class="footer-customer-service">

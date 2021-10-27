@@ -1,3 +1,4 @@
+const Darkmode = document.getElementById("moon-mode");
 const form = document.getElementById("a-form");
 const formParts = document.querySelectorAll(".part");
 const stepControl = document.getElementById("step-control");
@@ -5,6 +6,10 @@ const steps = document.querySelectorAll(".step");
 const btnControl = document.querySelector(".button-control");
 const nextBtn = document.querySelector(".btn-next");
 const prevBtn = document.querySelector(".previous-btn");
+const minusBtn = document.querySelector(".minus-btn");
+const addBtn = document.querySelector(".add-btn");
+const quantity = document.querySelector(".quantity");
+const cartItems = document.querySelector(".cart-items");
 
 let step = 0;
 let navbarSwitch = 0;
@@ -48,4 +53,27 @@ function setBtnDisabled() {
   }
 }
 
+// Cart items
+function handleCartItem(e) {
+  const node = e.target.parentNode.children[1];
+  const nowNum = node.innerText;
+
+  if (nowNum == 0) {
+    console.log("數字為零");
+  } else {
+    console.log("not working");
+  }
+}
+
+// Handle dark mode function
+function handleDarkMode(e) {
+  if (e.target.checked) {
+    document.documentElement.setAttribute("data-theme", "dark");
+  } else {
+    document.documentElement.setAttribute("data-theme", "root");
+  }
+}
+
+Darkmode.addEventListener("change", handleDarkMode);
+cartItems.addEventListener("click", handleCartItem);
 btnControl.addEventListener("click", handleBtnControlClicked);

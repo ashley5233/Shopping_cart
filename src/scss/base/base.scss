@@ -73,6 +73,16 @@ $spacers: (
 
 html {
   height: 100%;
+  background: var(--white);
+
+  > p,
+  h2,
+  div,
+  li,
+  ul,
+  a {
+    color: var(--black);
+  }
 }
 body {
   height: 100%;

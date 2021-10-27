@@ -4,4 +4,48 @@ $black: #2a2a2a;
 $step-gray: #afb1bd;
 $light-gray: #808080;
 $dark-gray: #4a4a4a;
+$gray-bg: #e6e6eb;
+$form-gray: #999999;
 $button-color: #f67599;
+$cart-btn-gray: #f0f0f5;
+
+/* global */
+:root {
+  --body-bg: #e5e5e5;
+  --white: #ffffff;
+  --black: #2a2a2a;
+  --step-gray: #afb1bd;
+  --light-gray: #808080;
+  --dark-gray: #4a4a4a;
+  --gray-bg: #e6e6e6;
+  --form-gray: #999999;
+  --button-color: #f67599;
+  --cart-btn-gray: #f0f0f5;
+  --cart-bg: #ffffff;
+  --footer-bg: #f6f7f8;
+  --footer-color: #333333;
+  --alpha-logo-url: url(https://svgshare.com/getbyhash/sha1-Ib38eZskDNhy2/jVy58LBuTs+FE=);
+  --search-icon-url: url(https://svgshare.com/getbyhash/sha1-GlNbTTv5kFaftipBwFe7NuQVvoc=);
+  --cart-icon-url: url(https://svgshare.com/getbyhash/sha1-aWSIukio7NnQ4pT7Bq33uq9Xc7Q=);
+  --moon-icon-url: url(https://svgshare.com/getbyhash/sha1-TmSEta0w6iTABZe6JCEmO4AO4Os=);
+}
+
+[data-theme="dark"] {
+  --body-bg: #e5e5e5;
+  --white: #2a2a2a;
+  --black: #ffffff;
+  --step-gray: #afb1bd;
+  --light-gray: #808080;
+  --dark-gray: #4a4a4a;
+  --gray-bg: #e6e6e6;
+  --form-gray: #999999;
+  --button-color: #f67599;
+  --cart-btn-gray: #808080;
+  --cart-bg: #383838;
+  --footer-bg: #333333;
+  --footer-color: rgba(255, 255, 255, 0.6);
+  --alpha-logo-url: url(https://svgshare.com/getbyhash/sha1-mdfQQhyyHC3GAMpmW6fCuE2QlYE=);
+  --search-icon-url: url(https://svgshare.com/getbyhash/sha1-KBCBYOO384JOO6manv5xrB5iuJE=);
+  --cart-icon-url: url(https://svgshare.com/getbyhash/sha1-QMy73JMiU95kIMPfb5fPf9GnrqM=);
+  --moon-icon-url: url(https://svgshare.com/getbyhash/sha1-wMgWvIzA7cnTz/soD0/o7OE/0tk=);
+}
