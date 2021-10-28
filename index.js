@@ -56,14 +56,20 @@ function setBtnDisabled() {
 }
 
 // Cart items
+
 function handleCartItem(e) {
   const node = e.target.parentNode.children[1];
-  const nowNum = node.innerText;
+  const btn = e.target;
 
-  if (nowNum == 0) {
-    console.log("數字為零");
-  } else {
-    console.log("not working");
+  if (btn.innerText === "-" && btn.nextElementSibling.innerText > 0) {
+    let num = btn.nextElementSibling.innerText;
+    num -= 1;
+    btn.nextElementSibling.innerHTML = num;
+  } else if (btn.innerText === "+") {
+    let num = parseInt(btn.previousElementSibling.innerText);
+    console.log(num);
+    num += 1;
+    btn.previousElementSibling.innerHTML = num;
   }
 }
 
@@ -77,7 +83,6 @@ function handleDarkMode(e) {
 }
 
 function handleNavbar(e) {
-  console.log(e.target.checked);
   if (e.target.checked) {
     mainContent.classList.add("disappear");
     mainContent.classList.remove("appear");
