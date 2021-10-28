@@ -619,10 +619,21 @@ body {
   visibility: hidden;
   position: absolute; }
 
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .navbar-logo .alpha-logo {
+    width: 169px;
+    height: 30px;
+    margin-left: 15px;
+    background: var(--alpha-logo-url) no-repeat; }
+
 .nav {
   transform-origin: top;
   transform: scale(1, 0);
   transition: transform 0.3s ease-out 0.15s;
+  background: var(--white);
   z-index: 999; }
   .nav__navbar-item {
     transition: opacity 0.2s ease-out 0.15s;
@@ -679,6 +690,14 @@ body {
 
 .navbar-toggle:checked ~ .nav .nav__navbar-item,
 .navbar-toggle:checked ~ .navbar-icon-items .navbar-icon {
+  opacity: 1; }
+
+.disappear {
+  transition: opacity 0.2s ease-out;
+  opacity: 0; }
+
+.appear {
+  transition: opacity 0.2s ease-in 0.2s;
   opacity: 1; }
 
 .main-container {
@@ -931,14 +950,7 @@ BREAKPOINTS - desktop
     .navbar-icon-items .navbar-icon {
       opacity: 1; }
   .navbar-logo {
-    grid-column: 3 /4;
-    display: flex;
-    align-items: center; }
-    .navbar-logo .alpha-logo {
-      width: 169px;
-      height: 30px;
-      margin-left: 15px;
-      background: var(--alpha-logo-url) no-repeat; }
+    grid-column: 3 /4; }
   .main-content {
     display: grid;
     grid-template-columns: 0.5fr 2fr 2fr 0.5fr;

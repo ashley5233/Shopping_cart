@@ -24,11 +24,24 @@
   visibility: hidden;
   position: absolute;
 }
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .alpha-logo {
+    width: 169px;
+    height: 30px;
+    margin-left: 15px;
+    background: var(--alpha-logo-url) no-repeat;
+  }
+}
 
 .nav {
   transform-origin: top;
   transform: scale(1, 0);
   transition: transform 0.3s ease-out 0.15s;
+  background: var(--white);
   z-index: 999;
 
   &__navbar-item {
@@ -102,6 +115,16 @@
 
 .navbar-toggle:checked ~ .nav .nav__navbar-item,
 .navbar-toggle:checked ~ .navbar-icon-items .navbar-icon {
+  opacity: 1;
+}
+
+.disappear {
+  transition: opacity 0.2s ease-out;
+  opacity: 0;
+}
+
+.appear {
+  transition: opacity 0.2s ease-in 0.2s;
   opacity: 1;
 }
 
@@ -419,15 +442,6 @@ BREAKPOINTS - desktop
 
   .navbar-logo {
     grid-column: 3 /4;
-    display: flex;
-    align-items: center;
-
-    .alpha-logo {
-      width: 169px;
-      height: 30px;
-      margin-left: 15px;
-      background: var(--alpha-logo-url) no-repeat;
-    }
   }
 
   // DeskTop layout

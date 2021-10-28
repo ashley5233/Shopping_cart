@@ -1,4 +1,6 @@
 const Darkmode = document.getElementById("moon-mode");
+const navbarToggle = document.getElementById("navbar-toggle");
+const mainContent = document.querySelector(".main-content");
 const form = document.getElementById("a-form");
 const formParts = document.querySelectorAll(".part");
 const stepControl = document.getElementById("step-control");
@@ -74,6 +76,18 @@ function handleDarkMode(e) {
   }
 }
 
+function handleNavbar(e) {
+  console.log(e.target.checked);
+  if (e.target.checked) {
+    mainContent.classList.add("disappear");
+    mainContent.classList.remove("appear");
+  } else {
+    mainContent.classList.add("appear");
+    mainContent.classList.remove("disappear");
+  }
+}
+
+navbarToggle.addEventListener("click", handleNavbar);
 Darkmode.addEventListener("change", handleDarkMode);
 cartItems.addEventListener("click", handleCartItem);
 btnControl.addEventListener("click", handleBtnControlClicked);
