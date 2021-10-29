@@ -12,6 +12,8 @@ const minusBtn = document.querySelector(".minus-btn");
 const addBtn = document.querySelector(".add-btn");
 const quantity = document.querySelector(".quantity");
 const cartItems = document.querySelector(".cart-items");
+const price = document.querySelector(".price");
+const totalPrice = document.querySelector(".total");
 
 let step = 0;
 let navbarSwitch = 0;
@@ -56,21 +58,32 @@ function setBtnDisabled() {
 }
 
 // Cart items
-
 function handleCartItem(e) {
-  const node = e.target.parentNode.children[1];
   const btn = e.target;
-
   if (btn.innerText === "-" && btn.nextElementSibling.innerText > 0) {
     let num = btn.nextElementSibling.innerText;
+    let price = btn.parentElement.nextElementSibling.getAttribute("data-price");
     num -= 1;
     btn.nextElementSibling.innerHTML = num;
+    cartTotal(-1, price);
   } else if (btn.innerText === "+") {
     let num = parseInt(btn.previousElementSibling.innerText);
-    console.log(num);
+    let price = btn.parentElement.nextElementSibling.getAttribute("data-price");
     num += 1;
     btn.previousElementSibling.innerHTML = num;
+    console.log(num, price);
+    cartTotal(1, price);
   }
+}
+
+let total = 5298;
+// count
+function cartTotal(num, price) {
+  sum = num * price;
+  console.log("sum", sum);
+  total += sum;
+  console.log("total:", total);
+  totalPrice.innerHTML = "$ " + total;
 }
 
 // Handle dark mode function
